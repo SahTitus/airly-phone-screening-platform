@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-brand-primary: #252fce;
+  --color-brand-primary-deep: #1f27b4;
+  --color-brand-primary-soft: #eef0ff;
+  --color-brand-secondary: #2731dd;
+  --color-brand-secondary-soft: #f3f4ff;
+  --color-primary: #252fce;
+
+  --color-bg-page: #f7f9ff;
+  --color-bg-surface: #ffffff;
+  --color-bg-muted: #f4f5ff;
+  --color-bg-subtle: #fbfcff;
+
+  --color-border-default: #dfe4f2;
+  --color-border-strong: #cfd6ea;
+  --color-border: #dfe4f2;
+  --color-input: #dfe4f2;
+  --color-ring: #2731dd;
+
+  --color-text-primary: #050725;
+  --color-text-secondary: #505979;
+  --color-text-muted: #747c99;
+  --color-muted-foreground: #747c99;
+  --color-popover-foreground: #050725;
+  --color-foreground: #050725;
+
+  --color-status-success: #028e64;
+  --color-status-success-soft: #e5f8eb;
+  --color-status-warning: #b45309;
+  --color-status-warning-soft: #fff4e6;
+  --color-status-danger: #ef2b25;
+  --color-status-danger-soft: #ffeeec;
+  --color-rating-gold: #f5b700;
+}
+
+:root {
+  --background: #f7f9ff;
+  --surface: #ffffff;
+  --primary: #252fce;
+  --primary-hover: #1f27b4;
+  --primary-soft: #eef0ff;
+  --text-main: #050725;
+  --text-muted: #505979;
+  --text-soft: #747c99;
+  --border: #dfe4f2;
+  --radius-card: 8px;
+  --radius-control: 6px;
+  --control-height: 44px;
+  --control-height-compact: 36px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: 0;
+}
+
+a[href],
+button,
+[role="button"],
+summary,
+label[for] {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.app-card {
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.app-card-padding-panel {
+  padding: 24px;
+}
+
+.app-card-padding-metric {
+  padding: 18px;
+}
+
+.app-card-padding-compact {
+  padding: 14px;
+}
+
+.app-label {
+  color: var(--text-soft);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px rgb(39 49 221 / 18%);
+}
+
+@media (max-width: 767px) {
+  .app-card-padding-panel {
+    padding: 16px;
+  }
+}
